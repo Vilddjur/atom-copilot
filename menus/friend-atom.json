@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle friend-atom",
+        "command": "friend-atom:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "friend-atom",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "friend-atom:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

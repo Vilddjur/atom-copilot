@@ -1,5 +1,5 @@
 {
   "atom-workspace": {
-    "ctrl-alt-o": "friend-atom:toggle"
+    "ctrl-alt-g": "friend-atom:toggle"
   }
 }

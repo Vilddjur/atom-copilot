@@ -1,14 +1,14 @@
 {
-  "name": "friend-atom",
-  "main": "./lib/friend-atom",
+  "name": "atom-copilot",
+  "main": "./lib/atom-copilot",
   "version": "0.0.0",
   "description": "A short description of your package",
   "keywords": [
   ],
   "activationCommands": {
-    "atom-workspace": "friend-atom:toggle"
+    "atom-workspace": "atom-copilot:toggle"
   },
-  "repository": "https://github.com/atom/friend-atom",
+  "repository": "https://github.com/atom/atom-copilot",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

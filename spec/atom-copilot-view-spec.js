@@ -1,8 +1,8 @@
 'use babel';
 
-import FriendAtomView from '../lib/friend-atom-view';
+import AtomCopilotView from '../lib/atom-copilot-view';
 
-describe('FriendAtomView', () => {
+describe('AtomCopilotView', () => {
   it('has one valid test', () => {
     expect('life').toBe('easy');
   });

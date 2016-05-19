@@ -1,44 +1,44 @@
 'use babel';
 
-import FriendAtom from '../lib/friend-atom';
+import AtomCopilot from '../lib/atom-copilot';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
 // To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
-describe('FriendAtom', () => {
+describe('AtomCopilot', () => {
   let workspaceElement, activationPromise;
 
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace);
-    activationPromise = atom.packages.activatePackage('friend-atom');
+    activationPromise = atom.packages.activatePackage('atom-copilot');
   });
 
-  describe('when the friend-atom:toggle event is triggered', () => {
+  describe('when the atom-copilot:toggle event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
-      expect(workspaceElement.querySelector('.friend-atom')).not.toExist();
+      expect(workspaceElement.querySelector('.atom-copilot')).not.toExist();
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'friend-atom:toggle');
+      atom.commands.dispatch(workspaceElement, 'atom-copilot:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
       });
 
       runs(() => {
-        expect(workspaceElement.querySelector('.friend-atom')).toExist();
+        expect(workspaceElement.querySelector('.atom-copilot')).toExist();
 
-        let friendAtomElement = workspaceElement.querySelector('.friend-atom');
-        expect(friendAtomElement).toExist();
+        let atomCopilotElement = workspaceElement.querySelector('.atom-copilot');
+        expect(atomCopilotElement).toExist();
 
-        let friendAtomPanel = atom.workspace.panelForItem(friendAtomElement);
-        expect(friendAtomPanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'friend-atom:toggle');
-        expect(friendAtomPanel.isVisible()).toBe(false);
+        let atomCopilotPanel = atom.workspace.panelForItem(atomCopilotElement);
+        expect(atomCopilotPanel.isVisible()).toBe(true);
+        atom.commands.dispatch(workspaceElement, 'atom-copilot:toggle');
+        expect(atomCopilotPanel.isVisible()).toBe(false);
       });
     });
 
@@ -51,11 +51,11 @@ describe('FriendAtom', () => {
       // workspaceElement to the DOM are generally slower than those off DOM.
       jasmine.attachToDOM(workspaceElement);
 
-      expect(workspaceElement.querySelector('.friend-atom')).not.toExist();
+      expect(workspaceElement.querySelector('.atom-copilot')).not.toExist();
 
       // This is an activation event, triggering it causes the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'friend-atom:toggle');
+      atom.commands.dispatch(workspaceElement, 'atom-copilot:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -63,10 +63,10 @@ describe('FriendAtom', () => {
 
       runs(() => {
         // Now we can test for view visibility
-        let friendAtomElement = workspaceElement.querySelector('.friend-atom');
-        expect(friendAtomElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'friend-atom:toggle');
-        expect(friendAtomElement).not.toBeVisible();
+        let atomCopilotElement = workspaceElement.querySelector('.atom-copilot');
+        expect(atomCopilotElement).toBeVisible();
+        atom.commands.dispatch(workspaceElement, 'atom-copilot:toggle');
+        expect(atomCopilotElement).not.toBeVisible();
       });
     });
   });

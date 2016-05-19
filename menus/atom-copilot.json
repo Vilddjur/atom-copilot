@@ -2,8 +2,8 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Toggle friend-atom",
-        "command": "friend-atom:toggle"
+        "label": "Toggle atom-copilot",
+        "command": "atom-copilot:toggle"
       }
     ]
   },
@@ -12,11 +12,11 @@
       "label": "Packages",
       "submenu": [
         {
-          "label": "friend-atom",
+          "label": "atom-copilot",
           "submenu": [
             {
               "label": "Toggle",
-              "command": "friend-atom:toggle"
+              "command": "atom-copilot:toggle"
             }
           ]
         }

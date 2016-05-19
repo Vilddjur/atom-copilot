@@ -1,4 +1,4 @@
-# friend-atom package
+# atom-copilot package
 
 A short description of your package.
 

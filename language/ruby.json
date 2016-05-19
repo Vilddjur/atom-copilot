@@ -2,8 +2,8 @@
   "require":{
     "net/http" : {
       "code": [
-        "Lorem ipsum asdp asd oapk pok \n NEWLINE",
-        "Hej san saaods ioasjd asdioj\n asdjdadkljsadklj"
+        "url = URI.parse('http://www.example.com/index.html')\nreq = Net::HTTP::Get.new(url.to_s)\nres = Net::HTTP.start(url.host, url.port) {|http|\n  http.request(req)\n}\nputs res.body",
+        "uri = URI.parse('http://www.example.com/index.html')\nhttp = Net::HTTP.new(uri.host, uri.port)\nhttp.use_ssl = true\nrequest = Net::HTTP::Post.new(uri.path, {'Content-Type' =>'application/json'})\nrequest.body = data.to_json\nresponse = http.request(request)"
       ]
     }
   }

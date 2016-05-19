@@ -1,0 +1,16 @@
+{
+  "import" : {
+    "requests": {
+      "examples" : [
+        {
+          "name": "Get request",
+          "code": "r = requests.get('https://github.com/timeline.json')\nprint r.text"
+        },
+        {
+          "name": "Post request",
+          "code": "url = 'https://api.github.com/some/endpoint'\npayload = {'some': 'data'}\nheaders = {'content-type': 'application/json'}\n\nr = requests.post(url, data=json.dumps(payload), headers=headers)"
+        }
+      ]
+    }
+  }
+}

@@ -11,6 +11,14 @@
           "code": "url = 'https://api.github.com/some/endpoint'\npayload = {'some': 'data'}\nheaders = {'content-type': 'application/json'}\n\nr = requests.post(url, data=json.dumps(payload), headers=headers)"
         }
       ]
+    },
+    "os": {
+      "examples":[
+        {
+          "name": "Execute shell command",
+          "code": "os.system('ls')"
+        }  
+      ]
     }
   }
 }
